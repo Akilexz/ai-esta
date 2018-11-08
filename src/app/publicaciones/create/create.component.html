@@ -1,0 +1,123 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Publicaciones</h4>
+                <p class="card-category">Sistema para realizar publicaciones</p>
+                <div class="row">
+                    <div class="subitem col-lg-6 rowup col-md-3 col-sm-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div id="typography">
+                    <div class="card-body">
+                        <div id="typography">
+                            <table class="table">
+                                <tr class="filters">
+                                    <div class="col-lg-6">
+                                        <th>
+                                            Nombre
+                                            <input type="text" pInputText class="form-control" size="50" placeholder="Nombre">
+                                        </th>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <th>
+                                            Texto
+                                            <input type="text" pInputText class="form-control" size="100" placeholder="Descripcion">
+                                        </th>
+                                    </div>
+                                    <div class="col-sm-3">
+                                    
+                                        <th>
+                                            Prioridad
+                                            <div>
+                                                <select id="lista " name="lista" class="form-control">
+                                                    <option value="Alta">Alta</option>
+                                                    <option value="Media">Media</option>
+                                                    <option value="Baja">Baja</option>
+                                                </select>
+                                            </div>
+                                        </th>
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        <th>
+                                            Fecha
+                                            <div>
+                                                <p-calendar [(ngModel)]="date" [inline]="false"></p-calendar>
+                                            </div>
+                                        </th>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <th>
+                                            Tipo
+                                            <div>
+                                                <select id="lista " name="lista" class="form-control">
+                                                    <option value="normal">normal</option>
+                                                    <option value="urgente">urgente</option>
+                                                    <option value="atrasado">atrasado</option>
+                                                    <option value="importante">importante</option>
+                                                </select>
+                                            </div>
+                                        </th>
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <th>
+                                            estado
+
+                                            <select id="lista" name="lista" class="form-control">
+                                                <option value="normal">Abierto</option>
+                                                <option value="urgente">Cerrado</option>
+                                                <option value="urgente">Progreso</option>
+                                            </select>
+
+                                        </th>
+                                    </div>
+
+                                    <div class="col-12"></div>
+                                    <div class="btn-group" role="group">
+                                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Destino
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                              <a class="dropdown-item" href="https://www.sharethis.com/platform/share-buttons-es/?gclid=EAIaIQobChMIrJephfDE3gIVDZ6fCh3IQAvuEAAYASAAEgLY9fD_BwE"><th>youtube</th></a>
+                                              <a class="dropdown-item" href="#"><th>twitter</th></a>
+                                              <a class="dropdown-item" href="#"><th>Email</th></a>
+                                          
+                                            </div>
+                                          </div>
+
+                                <tr *ngFor="let publicacion of  publicaciones">
+
+
+                                    <td>{{ publicacion.pubNombre}}
+                                    </td>
+                                    <td>{{publicacion.pubTexto}}
+                                    </td>
+                                    <td>{{publicacion.pubPrioridad}}
+                                    </td>
+                                    <td>{{publicacion.pubFecha}}
+                                    </td>
+                                    <td>{{publicacion.pubTipo}}
+                                    </td>
+                                    <td>{{publicacion.pubEstado}}
+                                    </td>
+
+z
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-round btn-outline-info" title="Aceptar">
+                    <a href="/multimedia/multimediaCreate" title="Aceptar" role="alert">Aceptar</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
